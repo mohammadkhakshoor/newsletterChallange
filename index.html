@@ -12,6 +12,8 @@
         />
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
         <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./mediaQueries.css" />
+        <script defer src="./index.js"></script>
         <title>Frontend Mentor | Newsletter sign-up form with success message</title>
     </head>
     <body>
@@ -32,14 +34,15 @@
                         type="email"
                         placeholder="Email address email@company.com"
                     />
-                    <button class="from__btn" type="submit">Subscribe to monthly newsletter</button>
+                    <input class="from__btn" type="submit" value="Subscribe to monthly newsletter" />
                 </form>
             </article>
             <div class="img-container">
                 <img class="img__from" src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
+                <img class="hidden-img" src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
             </div>
         </div>
-        <div class="popup">
+        <div class="hidden popup">
             <div class="popup__message">
                 <img class="popup__img" src="./assets/images/icon-list.svg" alt="" class="popup__img" />
                 <h1 class="popup__header">Thanks for subscribing!</h1>
