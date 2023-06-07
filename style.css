@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.6rem;
+
+    display: grid;
+    place-content: center;
+
+    background-color: hsl(233, 27%, 33%);
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    width: 100rem;
+
+    padding: 2rem;
+    border-radius: 35px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 6rem 0 4rem;
+}
+.img-container {
+    width: 50%;
+}
+.img__from {
+    border-radius: 20px;
+}
+
+.from__title {
+    font-size: 6rem;
+    margin-bottom: 2.5rem;
+}
+.from__description {
+    margin-bottom: 2rem;
+}
+.from__list {
+    margin-left: 0rem;
+    font-size: 1.5rem;
+}
+.from__item {
+    margin-bottom: 20rem;
+
+    background: url("./assets/images/icon-list.svg") no-repeat left center;
+    padding: 5px 15px 5px 35px;
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.from {
+}
+.from__label {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    color: hsl(234, 29%, 20%);
+}
+.from__input {
+    border: 1px solid rgb(162, 162, 162);
+    border-radius: 5px;
+    padding: 2rem 2rem;
+    width: 100%;
+    margin: 1rem 0 1.5rem 0;
+}
+.from__input,
+.from__input::placeholder {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.from__input:invalid {
+    border: none;
+    outline: 1px solid red;
+}
+
+.from__input:valid {
+    border: none;
+    outline: 1px solid greenyellow;
+}
+.from__input:focus {
+    border: none;
+    outline: 2px solid black;
+}
+.from__btn {
+    border: 0;
+    border-radius: 5px;
+    padding: 2rem 2rem;
+    width: 100%;
+    background-color: hsl(234, 29%, 20%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.from__btn:hover,
+.from__btn:focus,
+.from__btn:active {
+    padding: 2rem 2rem;
+    background-image: linear-gradient(to right, rgb(254, 95, 95), rgb(249, 154, 46));
+    box-shadow: 2px 11px 39px -14px rgba(224, 192, 108, 0.75);
+}
+.from__btn:focus {
+    outline: none;
+}
+
