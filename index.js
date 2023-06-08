@@ -6,14 +6,23 @@ const formContainer = document.querySelector(".from");
 
 fromButton.addEventListener("click", function (e) {
     e.preventDefault();
-    const email = formInput.value;
 
-    if (email.includes("@")) {
+    const email = formInput.value;
+    const invalidPopup = document.getElementsByClassName("from__invalid-popup");
+    if (!email || !email.includes("@")) {
+        // if the invalid popup does not exist in the dom , add it once and no more
+        if (!invalidPopup.length) {
+            const html = `
+        <label class="from__invalid-popup animate" for="email">Invalid E-mail</label>
+        `;
+            formContainer.insertAdjacentHTML("afterbegin", html);
+        }
+    }
+    if (email && email.includes("@")) {
         popup.classList.remove("hidden");
         popup.classList.add("animation");
-    }
-    if (!email || !email.includes("@")) {
-        alert("Please enter a valid E-mail address");
+        // delete the invalid E-mail popup when the address is correct
+        invalidPopup[0].remove();
     }
 });
 
